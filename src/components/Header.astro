@@ -70,4 +70,16 @@ import HeaderLink from './HeaderLink.astro';
       line-height: 34px;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .title-link {
+      font-size: 24px;
+      line-height: 36px;
+      transition: scale 0.1s ease-in-out;
+
+      &:hover {
+        scale: 1.02;
+      }
+    }
+  }
 </style>

@@ -23,10 +23,12 @@ const isActive = (href === '/' && !isAboutPage) || href === currentSlug;
     font-size: 16px;
     color: var(--color-text-primary);
     line-height: 24px;
-    opacity: 0.4;
 
-    &:hover {
-      opacity: 0.8;
+    &:not([aria-current='page']) {
+      opacity: 0.4;
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     &[aria-current='page'] {
@@ -39,6 +41,20 @@ const isActive = (href === '/' && !isAboutPage) || href === currentSlug;
     .page-link {
       font-size: 18px;
       line-height: 28px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .page-link {
+      font-size: 20px;
+      line-height: 30px;
+      transition: scale 0.1s ease-in-out;
+
+      &:not([aria-current='page']) {
+        &:hover {
+          scale: 1.02;
+        }
+      }
     }
   }
 </style>
