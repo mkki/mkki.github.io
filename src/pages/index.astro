@@ -4,14 +4,11 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
 const posts = (await getCollection('posts')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<PageLayout
-	title="devmkki"
-  description="mkki의 블로그"
->
+<PageLayout>
   <section class="article-section">
     <h2 class="sr-only">전체 포스트</h2>
     {
