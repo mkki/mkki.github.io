@@ -13,18 +13,18 @@ const posts = (await getCollection('posts')).sort(
   description="mkki의 블로그"
 >
   <section class="article-section">
-    <h2 class="sr-only">최근 포스트</h2>
+    <h2 class="sr-only">전체 포스트</h2>
     {
       posts.map((post) => (
-        <ariticle class="article">
-          <a href={`/${post.id}`}>
-            <h3 class="title">{post.data.title}</h3>
-            <p class="date">
+        <article class="article">
+          <a href={`/${post.id}`} class="article-link">
+            <h3 class="article-title">{post.data.title}</h3>
+            <p class="article-date">
               <FormattedDate date={post.data.pubDate} />
             </p>
-            <p class="description">{post.data.description}</p>
+            <p class="article-description">{post.data.description}</p>
           </a>
-        </ariticle>
+        </article>
       ))
     }
   </section>
@@ -34,11 +34,49 @@ const posts = (await getCollection('posts')).sort(
   .article-section {
     box-sizing: border-box;
     max-width: 800px;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 12px 16px 24px;
   }
+
   .article {
     & + .article {
-      margin-top: 20px;
+      margin-top: 8px;
+    }
+  }
+  .article-link {
+    display: block;
+    padding: 16px 0;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+
+  .article-title {
+    font-size: 24px;
+    color: var(--color-text-primary);
+    line-height: 36px;
+  }
+
+  .article-date {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    line-height: 20px;
+  }
+
+  .article-description {
+    margin-top: 4px;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .article-link {
+      transition: scale 0.2s ease-in-out;
+
+      &:hover {
+        scale: 1.005;
+      }
     }
   }
 </style>
