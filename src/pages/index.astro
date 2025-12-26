@@ -11,19 +11,23 @@ const posts = (await getCollection('posts')).sort(
 <PageLayout>
   <section class="article-section">
     <h2 class="sr-only">전체 포스트</h2>
-    {
-      posts.map((post) => (
-        <article class="article">
-          <a href={`/${post.id}`} class="article-link">
-            <h3 class="article-title">{post.data.title}</h3>
-            <p class="article-date">
-              <FormattedDate date={post.data.pubDate} />
-            </p>
-            <p class="article-description">{post.data.description}</p>
-          </a>
-        </article>
-      ))
-    }
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <article class="article">
+              <a href={`/${post.id}`} class="article-link">
+                <h3 class="article-title">{post.data.title}</h3>
+                <p class="article-date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+                <p class="article-description">{post.data.description}</p>
+              </a>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 </PageLayout>
 
