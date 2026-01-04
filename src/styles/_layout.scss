@@ -1,5 +1,15 @@
+
 body {
+    print-color-adjust: exact;
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
     text-size-adjust: none;
+    scroll-behavior: smooth;
+}
+
+@media print {
+    @page {
+        margin: 1cm;
+        size: A4;
+    }
 }

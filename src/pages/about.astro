@@ -1,17 +1,760 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import GithubIcon from '../components/GithubIcon.astro';
 ---
 
-<PageLayout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
->
-  <section class="about-me-section">
-  </section>
+<PageLayout>
+  <article class="about-me">
+    <h2 class="introduction-title">안녕하세요. 개발자 김민강입니다.</h2>
+    <p class="introduction-content">
+      웹 접근성과 웹 표준을 준수하며, 사용자 경험(UX)과 개발자 경험(DX)을 모두 고려한 설계를 지향합니다.
+      책임감을 가지고 업무를 주도적으로 진행할 수 있는 환경을 선호합니다.
+    </p>
+
+    <ul class="contact-list">
+      <li class="contact-item">
+        <a
+          href="mailto:devmkki@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+          aria-label="Email"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="2 4 20 16"
+            ><path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m3 8 5.45 3.633c1.283.856 1.925 1.283 2.618 1.45a4.001 4.001 0 0 0 1.864 0c.694-.167 1.335-.594 2.618-1.45L21 8M6.2 19h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C21 17.48 21 16.92 21 15.8V8.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C19.48 5 18.92 5 17.8 5H6.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C3 6.52 3 7.08 3 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C4.52 19 5.08 19 6.2 19Z"
+            ></path></svg
+          >
+        </a>
+      </li>
+      <li class="contact-item">
+        <a
+          href="https://github.com/mkki"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+          aria-label="GitHub"
+        >
+          <GithubIcon size={24} />
+        </a>
+      </li>
+      <li class="contact-item">
+        <a
+          href="https://www.linkedin.com/in/devmkki"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+          aria-label="LinkedIn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+            ><path
+              fill="currentColor"
+              d="M28.778 1.004H3.191a2.185 2.185 0 0 0-2.186 2.159v25.672a2.186 2.186 0 0 0 2.186 2.161h25.612c1.2 0 2.175-.963 2.194-2.159V3.165a2.195 2.195 0 0 0-2.195-2.161h-.029.001zM9.9 26.562H5.446V12.251H9.9zM7.674 10.293a2.579 2.579 0 1 1 2.579-2.58v.004a2.577 2.577 0 0 1-2.577 2.577h-.003zm18.882 16.269h-4.441v-6.959c0-1.66-.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441V12.252h4.266v1.951h.058a4.686 4.686 0 0 1 4.22-2.312h-.009c4.5 0 5.332 2.962 5.332 6.817v7.855z"
+            ></path></svg
+          >
+        </a>
+      </li>
+      <li class="contact-item">
+        <a
+          href="/rss.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-link"
+          aria-label="RSS"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 16 16"
+            ><g fill="currentColor"
+              ><path
+                d="M2.75 1a.75.75 0 0 0 0 1.5A10.75 10.75 0 0 1 13.5 13.25a.75.75 0 0 0 1.5 0A12.25 12.25 0 0 0 2.75 1z"
+              ></path><path
+                d="M2.75 6a.75.75 0 0 0 0 1.5 5.75 5.75 0 0 1 5.75 5.75.75.75 0 0 0 1.5 0A7.25 7.25 0 0 0 2.75 6zm.75 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
+              ></path></g
+            ></svg
+          >
+        </a>
+      </li>
+    </ul>
+
+    <section class="about-me-section experience-section">
+      <h3>Experience</h3>
+
+      <div class="experience-header">
+        <strong class="company-title">N Tech Service</strong>
+        <span class="company-position">UI개발</span>
+        <span class="company-date">
+          <time>2019.10</time> ~ 현재
+        </span>
+      </div>
+
+      <ul class="experience-list">
+        <li class="experience-item">
+          <strong class="experience-title">네이버웍스</strong>
+          <p class="experience-description">
+            네이버 통합 업무 플랫폼입니다. 게시판, 메일, 어드민, 앱 콘솔,
+            환경설정, 프로젝트, 문서 뷰어, 에디터 등 여러 서비스의 UI개발을
+            담당하였습니다.
+          </p>
+
+          <ul class="badge-list">
+            <li class="badge-item">
+              <span class="badge">react</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">scss</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">gulp</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">vite</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">nunjucks</span>
+            </li>
+          </ul>
+
+          <ul class="work-list">
+            <li class="work-item">
+              <strong class="work-title">레거시 코드 리팩토링</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  템플릿 엔진(Nunjucks)으로 컴포넌트 기반 개발 환경 구축하여 정적 페이지 산출물 공유 방식 유지하면서 모던한 개발 경험 확보
+                </li>
+                <li class="work-detail-item">
+                  수동으로 minify된 CSS를 SCSS로 전환하고 빌드 파이프라인 구축
+                </li>
+                <li class="work-detail-item">
+                  프론트엔드 개발 환경이 react로 전환되는 시점에 일부 컴포넌트를 공통화하여 유지보수성 강화
+                </li>
+                <li class="work-detail-item">
+                  IE 지원 종료 후 에디터와 같은 공통 모듈을 Shadow DOM으로 변경하여 서비스 스타일과 충돌 방지
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">웹 폰트 적용</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  FOUT 방식을 사용해 웹 폰트 로딩 전에 텍스트가 미노출되는 문제 해결
+                </li>
+                <li class="work-detail-item">
+                  preload 옵션을 사용하여 렌더링 차단 시간 최소화
+                </li>
+                <li class="work-detail-item">
+                  다국어를 고려한 경량화된 서브셋과 다이나믹 서브셋으로 초기 로딩 속도 개선
+                </li>
+                <li class="work-detail-item">
+                  font-smoothing 속성을 사용하여 저해상도 환경에서 발생하는 선명도 저하 대응
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">모바일웹 다크 모드</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  CSS variables와 media query를 사용하여 다크 모드 대응
+                </li>
+                <li class="work-detail-item">
+                  CSS image sprites와 mask 속성을 사용하여 이미지 리소스 절감과 색상 변경 대응
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">모바일웹과 앱 UI 처리 책임 분리</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  모바일웹(웹뷰)과 앱에 혼재된 iOS safe-area 대응과 스크롤 방지 로직을 CSS로만 구현하도록 개선하여 의도치 않은 런타임 이슈 제거
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">gulp에서 vite로 개발 환경 전환</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  CSS minify와 vender prefix 처리를 위한 gulp 라이브러리가 최신 CSS 문법을 지원하지 않아 발생하는 문제 해결
+                </li>
+                <li class="work-detail-item">
+                  약 4MB의 CSS 산출물 기준 빌드 속도 최대 3배 향상(7s → 2s)
+                </li>
+                <li class="work-detail-item">
+                  보일러 플레이트 저장소를 구성하여 신규 프로젝트 시작 시간 단축
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">코드 리뷰 요청 프로세스 자동화</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  사내 서버리스 플랫폼(lambda)과 github webhook을 활용하여 PR 생성 시 코드 리뷰 저장소에 자동으로 이슈를 생성하고 메시지봇을 통해 코드 리뷰 요청 알림을 전송하도록 개선
+                </li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">모노레포 구조의 react 전환 파일럿 프로젝트</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  파편화된 UI 통합과 기술 부채 해소를 목적으로 게시판 PC웹 서비스의 React 전환 파일럿 프로젝트 진행
+                </li>
+                <li class="work-detail-item">
+                  CSS Modules 기반 CSS 코드 스플리팅으로 초기 로딩 성능 개선
+                </li>
+                <li class="work-detail-item">
+                  모노레포 구조로 공통 UI 컴포넌트를 패키지화하여 재사용성 향상
+                </li>
+                <li class="work-detail-item">
+                  Storybook 기반 문서화를 통해 서비스 간 UI 파편화를 방지하고 디자인 시스템 기반 마련
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="experience-item">
+          <strong class="experience-title">네이버 PWE</strong>
+          <p class="experience-description">
+            네이버 개인화 기반 서비스입니다. 메일과 캘린더, 공통 모듈(GNB, 에디터)의 UI개발을 담당했습니다.
+          </p>
+
+          <ul class="badge-list">
+            <li class="badge-item">
+              <span class="badge">scss</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">gulp</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">nunjucks</span>
+            </li>
+          </ul>
+
+          <ul class="work-list">
+            <li class="work-item">
+              <strong class="work-title">메일 모바일웹, 태블릿웹, PC웹 통합 반응형 개편</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  모바일과 태블릿, PC 통합 환경의 반응형 UI개발
+                </li>
+                <li class="work-detail-item">
+                  CSS variables와 media query로 모바일 다크 모드 대응
+                </li>
+                <li class="work-detail-item">
+                  IE10 지원을 위한 CSS variables fallback 코드 생성 플러그인 추가
+                </li>
+                <li class="work-detail-item">웹 접근성 전문가 진단 결과를 보통(75점 이상)에서 양호(85점 이상)로 개선</li>
+                <li class="work-detail-item">보안 취약점(Contents Overwrite)을 CSS로 대응하여 방지</li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">캘린더 연말정산 페이지</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">
+                  <a href="https://calendar.naver.com/web/2023-year-end" target="_blank" rel="noopener noreferrer" class="link">2023년도 연말정산</a>,
+                  <a href="https://calendar.naver.com/web/2025-year-end" target="_blank" rel="noopener noreferrer" class="link">2025년도 연말정산</a>
+                  페이지 UI개발
+                </li>
+                <li class="work-detail-item">인터랙션은 CSS animation으로 구현하였고, Cumulative Layout Shift(CLS)를 유발하는 속성 사용을 최소화하여 성능 최적화</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="experience-item">
+          <strong class="experience-title">UI.VELO</strong>
+          <p class="experience-description">
+            사내 UI 성능최적화 가이드를 기준으로 서비스를 진단해 볼 수 있는 도구입니다.
+          </p>
+
+          <ul class="badge-list">
+            <li class="badge-item">
+              <span class="badge">vuejs</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">nuxt</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">express</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">mongodb</span>
+            </li>
+            <li class="badge-item">
+              <span class="badge">mongoose</span>
+            </li>
+          </ul>
+
+          <ul class="work-list">
+            <li class="work-item">
+              <strong class="work-title">상위 30% 평균 지표 환경별 세분화</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">상대적으로 높은 점수가 나오는 PC 지표를 모바일 지표와 분리하여 환경별 상위 30% 평균 지표 산정</li>
+                <li class="work-detail-item">모바일 상위 30% 평균 지표가 비정상적으로 높게 측정되는 문제 해결</li>
+              </ul>
+            </li>
+            <li class="work-item">
+              <strong class="work-title">진단 로직 개선</strong>
+              <ul class="work-detail-list">
+                <li class="work-detail-item">트랜잭션을 사용하여 진단 페이지 로그인 실패와 진단 결과 처리 로직을 안전하게 관리하도록 개선</li>
+                <li class="work-detail-item">에러를 클래스로 추상화하여 일관된 상태 코드와 메시지를 반환하도록 개선</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about-me-section">
+      <h3>Project</h3>
+      <ul class="project-list">
+        <li class="project-item">
+          <div class="project-header">
+            <strong class="project-title">상태창</strong>
+            <span class="project-date">
+              <time>2025.05</time> ~ <time>2026.01</time>
+            </span>
+            <a
+              href="https://github.com/mkki/status-front"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="CMC 17기 상태창 프론트엔드 저장소"
+            >
+              <GithubIcon />
+            </a>
+          </div>
+          <p class="project-description">
+            실천 기반 퀘스트를 통해 나를 성장시키는 자기 계발 앱입니다. CMC 17기로 참여해 진행한 프로젝트로 프론트엔드 개발을 담당했습니다.
+            자세한 내용은 <a href="https://github.com/mkki/status-front/wiki" target="_blank" rel="noopener noreferrer" class="link">저장소 위키</a>에서 확인 가능합니다.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about-me-section">
+      <h3>Activity</h3>
+      <ul class="activity-list">
+        <li class="activity-item">
+          <div class="activity-header">
+            <strong class="activity-title">CMC</strong>
+            <span class="activity-date">
+              <time>2025.05</time> ~ <time>2025.08</time>
+            </span>
+          </div>
+          <p class="activity-description">
+            수익 창출형 MVP 프로덕트를 제작하는 IT 커뮤니티입니다. 17기 웹 파트로 참여했습니다.
+          </p>
+        </li>
+        <li class="activity-item">
+          <div class="activity-header">
+            <strong class="activity-title"
+              >NTS 2021 부스트코스 연계 인턴십</strong
+            >
+            <span class="activity-date">
+              <time>2021.04</time> ~ <time>2021.05</time>
+            </span>
+          </div>
+          <p class="activity-description">
+            멘토로 참여하여 과제 피드백 및 코드 리뷰를 진행했습니다.
+          </p>
+        </li>
+        <li class="activity-item">
+          <div class="activity-header">
+            <strong class="activity-title">NTS 2021 상반기 인턴십</strong>
+            <span class="activity-date">
+              <time>2021.01</time> ~ <time>2021.02</time>
+            </span>
+          </div>
+          <p class="activity-description">
+            멘토로 참여하여 과제 피드백 및 코드 리뷰를 진행했습니다.
+          </p>
+        </li>
+        <li class="activity-item">
+          <div class="activity-header">
+            <strong class="activity-title">부스트코스 에이스 2019 Summer</strong>
+            <span class="activity-date">
+              <time>2019.08</time> ~ <time>2019.09</time>
+            </span>
+            <a
+              href="https://github.com/mkki/boostcourse-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="activity-link"
+              aria-label="부스트코스 에이스 2019 Summer 웹 과정 저장소"
+            >
+              <GithubIcon />
+            </a>
+          </div>
+          <p class="activity-description">
+            현업 개발자의 코드 리뷰를 통해 실무 프로젝트를 진행하는 교육 과정입니다.
+            2기 웹 과정을 수료하고 우수 학생으로 선발되었습니다.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about-me-section">
+      <h3>Education</h3>
+      <dl class="education-list">
+        <div class="education-item">
+          <dt class="school">경희대학교</dt>
+          <dd class="major">산업경영공학</dd>
+          <dd class="period"><time>2011.03</time> ~ <time>2017.02</time></dd>
+        </div>
+        <div class="education-item">
+          <dt class="school">선린인터넷고등학교</dt>
+          <dd class="major">웹운영과</dd>
+          <dd class="period"><time>2008.03</time> ~ <time>2011.02</time></dd>
+        </div>
+      </dl>
+    </section>
+  </article>
 </PageLayout>
 
 <style lang="scss">
+  .about-me {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 26px 16px 40px;
+    color: var(--color-text-primary);
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  .introduction-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .introduction-content {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contact-list {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .contact-item {
+    flex: 0 0 auto;
+  }
+
+  .contact-link {
+    display: block;
+    padding: 6px;
+    margin: -6px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-primary);
+      vertical-align: top;
+    }
+  }
+
   .about-me-section {
-    padding: 16px;
+    margin-top: 40px;
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  .experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 4px;
+    .company-title {
+      display: block;
+      flex: 0 1 auto;
+      min-width: 0;
+      font-size: 22px;
+      line-height: 34px;
+    }
+
+    .company-position {
+      display: block;
+      flex: 0 0 auto;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .company-date {
+      display: block;
+      flex: 0 0 auto;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+  }
+
+  .experience-list {
+    margin-top: 12px;
+  }
+
+  .experience-item {
+    & + .experience-item {
+      margin-top: 28px;
+    }
+
+    .experience-title {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .badge {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--color-badge-background);
+    font-size: 14px;
+    color: var(--color-badge-text);
+    line-height: 20px;
+  }
+
+  .work-list {
+    margin-top: 16px;
+    padding: 0 4px;
+  }
+
+  .work-item {
+    .work-title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    & + .work-item {
+      margin-top: 12px;
+    }
+  }
+
+  .work-detail-list {
+    margin-top: 4px;
+  }
+
+  .work-detail-item {
+    position: relative;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 4px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--color-text-primary);
+      content: '';
+    }
+
+    .link {
+      color: var(--color-text-link);
+      text-decoration: underline;
+    }
+  }
+
+  .project-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 4px;
+
+    .project-title {
+      display: block;
+      flex: 0 1 auto;
+      min-width: 0;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .project-date {
+      display: block;
+      flex: 0 0 auto;
+      padding-right: 4px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .project-link {
+      flex: 0 0 auto;
+      padding: 8px;
+      margin: -8px;
+      line-height: 1px;
+    }
+  }
+
+  .project-description {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 24px;
+
+    .link {
+      color: var(--color-text-link);
+      text-decoration: underline;
+    }
+  }
+
+  .activity-item {
+    & + .activity-item {
+      margin-top: 20px;
+    }
+  }
+
+  .activity-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 4px;
+
+    .activity-title {
+      display: block;
+      flex: 0 1 auto;
+      min-width: 0;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    .activity-date {
+      display: block;
+      flex: 0 0 auto;
+      padding-right: 4px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    .activity-link {
+      flex: 0 0 auto;
+      padding: 8px;
+      margin: -8px;
+      line-height: 1px;
+    }
+  }
+
+  .activity-description {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .education-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 4px;
+
+    .school,
+    .major {
+      display: block;
+      flex: 0 0 auto;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .period {
+      display: block;
+      flex: 0 0 auto;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 20px;
+    }
+
+    & + .education-item {
+      margin-top: 4px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+
+    .about-me {
+      padding: 40px 16px 60px
+    }
+
+    .contact-link,
+    .project-link {
+      transition: scale 0.1s ease-in-out;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
+    .experience-section {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 200px 1fr;
+
+      .experience-header {
+        grid-column: 1 / 2;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .company-position {
+          margin-top: 4px;
+        }
+      }
+
+      .experience-list {
+        grid-column: 2 / 3;
+      }
+    }
+
+    .experience-list {
+      margin-top: 0;
+    }
+  }
+
+  @media print {
+    .about-me {
+      padding: 0;
+    }
+
+    .experience-section {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 200px 1fr;
+
+      .experience-header {
+        grid-column: 1 / 2;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .company-position {
+          margin-top: 4px;
+        }
+      }
+
+      .experience-list {
+        grid-column: 2 / 3;
+      }
+    }
+
+    .experience-list {
+      margin-top: 0;
+    }
   }
 </style>
