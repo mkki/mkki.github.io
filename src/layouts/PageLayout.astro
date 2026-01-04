@@ -1,5 +1,6 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import SkipNavigation from '../components/SkipNavigation.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 ---
@@ -10,8 +11,9 @@ import Header from '../components/Header.astro';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <SkipNavigation />
     <Header />
-    <main>
+    <main id="main">
       <slot />
     </main>
   </body>

@@ -1,0 +1,28 @@
+<a href="#main" class="skip-navigation">본문으로 이동</a>
+
+<style lang="scss">
+  @use '../styles/_mixins';
+
+  .skip-navigation {
+    @include mixins.blind;
+
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    &:focus {
+      width: auto;
+      height: auto;
+      padding: 4px 12px;
+      border-radius: 8px;
+      background-color: var(--color-background-tertiary);
+      font-size: 14px;
+      color: var(--color-text-black);
+      line-height: 20px;
+      white-space: nowrap;
+      overflow: visible;
+      clip: auto;
+    }
+  }
+</style>
