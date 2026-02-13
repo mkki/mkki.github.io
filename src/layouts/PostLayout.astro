@@ -37,12 +37,13 @@ const { title, description, publishedAt } = Astro.props;
     box-sizing: border-box;
     max-width: 800px;
     margin: 0 auto;
-    padding: 32px 16px;
+    padding: 32px 16px 40px;
     color: var(--color-text-primary);
   }
 
   .title {
     font-size: 40px;
+    font-weight: 900;
     line-height: 50px;
   }
 
@@ -55,5 +56,15 @@ const { title, description, publishedAt } = Astro.props;
 
   .markdown {
     margin-top: 48px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .article {
+      padding: 40px 16px 60px;
+    }
+
+    .markdown {
+      margin-top: 48px;
+    }
   }
 </style>
