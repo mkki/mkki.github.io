@@ -7,7 +7,7 @@ import SkipNavigation from '../components/SkipNavigation.astro';
 
 type Props = CollectionEntry<'posts'>['data'];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, publishedAt } = Astro.props;
 ---
 
 <html lang="ko">
@@ -19,27 +19,41 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     <SkipNavigation />
     <Header />
     <main class="main">
-      <article>
-        <div class="title">
-          <div class="date">
-            <FormattedDate date={pubDate} />
-            {
-              updatedDate && (
-                <div class="last-updated-on">
-                  Last updated on <FormattedDate date={updatedDate} />
-                </div>
-              )
-            }
-          </div>
-          <h1>{title}</h1>
-          <hr />
+      <article class="article">
+        <h1 class="title">{title}</h1>
+        <div class="date">
+          <FormattedDate date={publishedAt} />
         </div>
-        <slot />
+        <div class="markdown">
+          <slot />
+        </div>
       </article>
     </main>
   </body>
 </html>
 
 <style lang="scss">
+  .article {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    color: var(--color-text-primary);
+  }
 
+  .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .date {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    line-height: 20px;
+  }
+
+  .markdown {
+    margin-top: 48px;
+  }
 </style>

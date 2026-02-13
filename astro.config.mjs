@@ -3,6 +3,11 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-	site: 'https://mkki.github.io',
-	integrations: [mdx(), sitemap()],
+  site: 'https://mkki.github.io',
+  integrations: [mdx(), sitemap()],
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+    },
+  },
 });
