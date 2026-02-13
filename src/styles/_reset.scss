@@ -1,5 +1,14 @@
 @font-face {
     font-family: Pretendard;
+    font-weight: 900;
+    font-display: swap;
+    src:
+        local('Pretendard ExtraBold'),
+        url('/fonts/Pretendard-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: Pretendard;
     font-weight: 700;
     font-display: swap;
     src:
