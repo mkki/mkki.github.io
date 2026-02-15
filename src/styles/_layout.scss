@@ -1,10 +1,18 @@
-
 body {
     print-color-adjust: exact;
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
     text-size-adjust: none;
     scroll-behavior: smooth;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
 }
 
 @media print {
